@@ -1,0 +1,48 @@
+# Ignorar ambientes virtuais Python
+.venv/
+venv/
+
+# Ignorar bytecode Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignorar arquivos de build/distribuição
+build/
+dist/
+*.egg-info/
+
+# Ignorar cache
+.cache/
+pip-wheel-metadata/
+
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos do VSCode
+.vscode/
+
+# Ignorar arquivos PowerShell
+*.ps1
+*.psm1
+
+# Ignorar arquivos Shell (bash, zsh etc.)
+*.sh
+
+# Ignorar arquivos da linguagem C
+*.c
+*.h
+*.o
+*.out
+*.exe
+*.obj
+
+# Ignorar outros tipos genéricos
+*.tmp
+*.log
+
+# NÃO ignorar HTML, CSS e JavaScript
+!*.html
+!*.css
+!*.js

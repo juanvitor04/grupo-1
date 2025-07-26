@@ -14,3 +14,4 @@ A aplicação permite ao usuário inserir um **nome de usuário** e uma **senha*
 - CSS
 - JavaScript
 - Framework Flask
+
