@@ -7,10 +7,8 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
   <div class="login-container">
     <h2>Login</h2>
-    
     {% with mensagens = get_flashed_messages() %}
       {% if mensagens %}
         <div class="message">{{ mensagens[0] }}</div>
