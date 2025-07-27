@@ -2,13 +2,13 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Página de Login</title>
+  <title>Cadastro</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <div class="login-container">
-    <h2>Login</h2>
+    <h2>Cadastro</h2>
+
     {% with mensagens = get_flashed_messages() %}
       {% if mensagens %}
         <div class="message">{{ mensagens[0] }}</div>
@@ -22,13 +22,8 @@
       <label for="senha">Senha</label>
       <input type="password" id="senha" name="senha" required>
 
-      <button type="submit">Entrar</button>
-      
+      <button type="submit">Cadastrar</button>
     </form>
-<button onclick='window.location.href="{{ url_for("cadastro") }}"' class="btn-cadastrar">Cadastrar</button>
-
   </div>
 </body>
 </html>
-
-<!--testando-->
