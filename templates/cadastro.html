@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Cadastro</h2>
+
+    {% with mensagens = get_flashed_messages() %}
+      {% if mensagens %}
+        <div class="message">{{ mensagens[0] }}</div>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+      <label for="usuario">Usuário</label>
+      <input type="text" id="usuario" name="usuario" required>
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" required>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+</body>
+</html>
