@@ -39,7 +39,6 @@ def jogo():
 def logout():
     session.pop('usuario', None)
     return redirect(url_for('login'))
-
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
     if request.method == 'POST':
