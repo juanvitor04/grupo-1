@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jogo do Tigrinho - Fortune Tiger</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='jogo.css') }}">
+</head>
+<body>
+    <div class="game-background">
+        <div class="header">
+            <h1>🐯 Fortune Tiger 🐯</h1>
+            <div class="user-info">
+                <span>Bem-vindo, {{ usuario }}!</span>
+                <button onclick="location.href='{{ url_for('logout') }}'" class="logout-btn">Sair</button>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div class="saldo-container">
+                <div class="saldo">
+                    <span>💰 Saldo: R$ <span id="saldo">1000.00</span></span>
+                </div>
+                <div class="aposta">
+                    <label>Aposta: R$ </label>
+                    <select id="apostaValor">
+                        <option value="10">10.00</option>
+                        <option value="20">20.00</option>
+                        <option value="50">50.00</option>
+                        <option value="100">100.00</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="slot-machine">
+                <div class="slot-container">
+                    <div class="slot-reel" id="reel1">
+                        <div class="symbol">🐯</div>
+                    </div>
+                    <div class="slot-reel" id="reel2">
+                        <div class="symbol">🍀</div>
+                    </div>
+                    <div class="slot-reel" id="reel3">
+                        <div class="symbol">💎</div>
+                    </div>
+                </div>
+                
+                <button id="spinBtn" class="spin-button">
+                    🎰 GIRAR 🎰
+                </button>
+            </div>
+
+            <div class="resultado" id="resultado"></div>
+
+            <div class="premio-info">
+                <h3>🏆 Tabela de Prêmios</h3>
+                <div class="premio-lista">
+                    <div>🐯🐯🐯 = 10x</div>
+                    <div>💎💎💎 = 8x</div>
+                    <div>🍀🍀🍀 = 5x</div>
+                    <div>⭐⭐⭐ = 3x</div>
+                    <div>🔥🔥🔥 = 2x</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='jogo.js') }}"></script>
+</body>
+</html>

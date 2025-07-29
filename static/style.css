@@ -1,14 +1,24 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f0f2f5;
+:root{
+  --cor01:#003cff7e;
+  --cor02:#2196f3;
+  --cor03:#003a69;
+
+}
+  body {
+ font-family: Arial, sans-serif;
+  background-image: url("img/background.jpeg");  /* Caminho relativo ao CSS */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .login-container {
-  background-color: #fff8dc;
+  background-color: var(--cor01);
   padding: 30px 40px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -42,7 +52,7 @@ button {
   width: 100%;
   padding: 12px;
   margin-top: 20px;
-  background-color: #4CAF50;
+  background-color: #000d47;
   color: white;
   border: none;
   border-radius: 8px;
@@ -59,4 +69,36 @@ button:hover {
   margin-top: 15px;
   font-size: 14px;
   color: red;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.137); /* escurece a imagem */
+  z-index: -1;
+}
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--cor02);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--cor03);
+}
+
+.btn-cadastrar {
+  background-color: var(--cor02); /* azul */
+}
+
+.btn-cadastrar:hover {
+  background-color: var(--cor03);
 }
