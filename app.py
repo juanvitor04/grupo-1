@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 import sqlite3
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -21,13 +21,24 @@ def login():
         conn.close()
 
         if user and check_password_hash(user['senha'], senha):
-            return f"<h1>Bem-vindo, {usuario}!</h1>"
+            session['usuario'] = usuario
+            return redirect(url_for('jogo'))
         else:
             flash('Usuário ou senha incorretos')
             return redirect(url_for('login'))
 
     return render_template('index.html')
 
+@app.route('/jogo')
+def jogo():
+    if 'usuario' not in session:
+        return redirect(url_for('login'))
+    return render_template('jogo.html', usuario=session['usuario'])
+
+@app.route('/logout')
+def logout():
+    session.pop('usuario', None)
+    return redirect(url_for('login'))
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
     if request.method == 'POST':
