@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jogo do Tigrinho - Fortune Tiger</title>
+    <title>🐯 UB-Tiger</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='jogo.css') }}">
+    <style>
+        body {
+            background: url("{{ url_for('static', filename='tigrinho-background.jpg') }}") center/cover no-repeat fixed !important;
+        }
+    </style>
 </head>
 <body>
     <div class="game-background">
@@ -64,6 +70,16 @@
             </div>
         </div>
     </div>
+
+    <!-- Botão de Inserir Dinheiro -->
+    <button id="inserirBtn" class="inserir-button">
+        💰 DEPÓSITO
+    </button>
+
+    <!-- Botão de Saque -->
+    <button id="saqueBtn" class="saque-button">
+        💸 SACAR
+    </button>
 
     <script src="{{ url_for('static', filename='jogo.js') }}"></script>
 </body>

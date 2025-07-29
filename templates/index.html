@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Página de Login</title>
+  <title>🐯 Unibra Tiger - Login</title>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <div class="login-container">
-    <h2>Login</h2>
+    <h2>🐯 Login - Unibra Tiger</h2>
     {% with mensagens = get_flashed_messages() %}
       {% if mensagens %}
         <div class="message">{{ mensagens[0] }}</div>
@@ -30,5 +31,3 @@
   </div>
 </body>
 </html>
-
-<!--testando-->
