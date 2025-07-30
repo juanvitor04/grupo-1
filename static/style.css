@@ -1,15 +1,13 @@
 :root{
-  --cor01:#003cff7e;
-  --cor02:#2196f3;
-  --cor03:#003a69;
+  --cor01:#440072;
+  --cor02:#6000fa;
+  --cor03:#8400ac;
 
 }
   body {
- font-family: Arial, sans-serif;
-  background-image: url("img/background.jpeg");  /* Caminho relativo ao CSS */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to right,var(--cor01),var(--cor03));
+  color: white;
   height: 100vh;
   margin: 0;
   display: flex;
@@ -29,7 +27,7 @@
 h2 {
   text-align: center;
   margin-bottom: 24px;
-  color: #333;
+  color: #ffff;
 }
 
 label {
