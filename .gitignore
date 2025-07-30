@@ -1,48 +1,14 @@
-# Ignorar ambientes virtuais Python
-.venv/
-venv/
+# Ignora tudo
+*
 
-# Ignorar bytecode Python
-__pycache__/
-*.py[cod]
-*$py.class
+# Mas inclui pastas (senão os arquivos dentro delas não são avaliados)
+!*/
 
-# Ignorar arquivos de build/distribuição
-build/
-dist/
-*.egg-info/
-
-# Ignorar cache
-.cache/
-pip-wheel-metadata/
-
-# Ignorar arquivos do sistema
-.DS_Store
-Thumbs.db
-
-# Ignorar arquivos do VSCode
-.vscode/
-
-# Ignorar arquivos PowerShell
-*.ps1
-*.psm1
-
-# Ignorar arquivos Shell (bash, zsh etc.)
-*.sh
-
-# Ignorar arquivos da linguagem C
-*.c
-*.h
-*.o
-*.out
-*.exe
-*.obj
-
-# Ignorar outros tipos genéricos
-*.tmp
-*.log
-
-# NÃO ignorar HTML, CSS e JavaScript
+# Inclui apenas os tipos de arquivo desejados
+!*.py
 !*.html
 !*.css
 !*.js
+!*.db
+!*.txt
+!*.md
