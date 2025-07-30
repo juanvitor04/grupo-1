@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: url('../img/tigrinho-background.jpg') center/cover no-repeat fixed;
+    background: url('static/tigrinho-background.jpg') center/cover no-repeat fixed;
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -255,6 +255,78 @@ body {
     transform: scale(1.05);
 }
 
+.saque-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+    border: 2px solid #FFD700;
+}
+
+.inserir-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+    border: 2px solid #FFD700;
+}
+
+.saque-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    animation: pulse-saque 1s ease-in-out infinite;
+}
+
+.inserir-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    background: linear-gradient(45deg, #2980b9, #3498db);
+    animation: pulse-inserir 1s ease-in-out infinite;
+}
+
+.saque-button:active {
+    transform: translateY(0px) scale(1);
+}
+
+.inserir-button:active {
+    transform: translateY(0px) scale(1);
+}
+
+@keyframes pulse-saque {
+    0% { box-shadow: 0 10px 20px rgba(0,0,0,0.4), 0 0 0 0 rgba(46, 204, 113, 0.7); }
+    70% { box-shadow: 0 10px 20px rgba(0,0,0,0.4), 0 0 0 10px rgba(46, 204, 113, 0); }
+    100% { box-shadow: 0 10px 20px rgba(0,0,0,0.4), 0 0 0 0 rgba(46, 204, 113, 0); }
+}
+
+@keyframes pulse-inserir {
+    0% { box-shadow: 0 10px 20px rgba(0,0,0,0.4), 0 0 0 0 rgba(52, 152, 219, 0.7); }
+    70% { box-shadow: 0 10px 20px rgba(0,0,0,0.4), 0 0 0 10px rgba(52, 152, 219, 0); }
+    100% { box-shadow: 0 10px 20px rgba(0,0,0,0.4), 0 0 0 0 rgba(52, 152, 219, 0); }
+}
+
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -291,5 +363,12 @@ body {
     
     .slot-machine {
         padding: 20px;
+    }
+    
+    .saque-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 20px;
+        font-size: 1em;
     }
 }
